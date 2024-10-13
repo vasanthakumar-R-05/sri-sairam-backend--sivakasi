@@ -1,0 +1,105 @@
+.container {
+  display: flex; 
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 20px; 
+  box-sizing: border-box; 
+}
+
+.left-section {
+  flex: 1;
+  margin-right: 20px;
+  max-width: 45%; 
+  overflow-y: auto; 
+}
+
+.right-section {
+  padding: 0%;
+  margin: 0%;
+  flex: 1; 
+  max-width: 45%;
+  overflow-y: auto; 
+}
+
+.feedback-form {
+  background-color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0%;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.feedback-form h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #030303;
+  font-size: 1.8rem; 
+}
+
+.feedback-form .form-group {
+  margin-bottom: 20px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+
+.feedback-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.feedback-form button {
+  background-color: purple;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;  
+  font-size: 16px;
+  width: 100%; 
+  margin-top: 10px;
+}
+.coupon-container {
+  background-color: #bce5be;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.applyc{
+  width: 95%;
+  padding:20px;
+  border-radius: 10px;
+  background-color:rgb(241, 237, 237);
+}
+.coupon-label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.coupon-input-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding-right: 10px;
+  background-color: #fff;
+}
+
+.coupon-input {
+  border: none;
+  font-size: 16px;
+  outline: none;
+  flex-grow: 1;
+}
+
+

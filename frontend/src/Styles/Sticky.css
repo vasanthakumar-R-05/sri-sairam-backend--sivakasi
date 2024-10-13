@@ -1,0 +1,15 @@
+.sticky-cart {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+  }
+  
+  .sticky-cart p {
+    margin: 0;
+    font-size: 18px;
+  }
+  

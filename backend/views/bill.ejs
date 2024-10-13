@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill - sri sairam Crackers</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .header {
+        text-align: center;
+        color: rgb(14, 12, 12);
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      .bill-info {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .bill-info h2 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: normal;
+      }
+      .bill-info p {
+        margin: 4px 0;
+        font-size: 14px;
+      }
+      .product-table {
+        width: 100%;
+      }
+      .product-table th {
+        border-bottom: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      .lastd{
+        text-align: center;
+      }
+      .product-table td {
+        border-bottom: 1px solid rgb(137, 137, 137);
+      }
+      .product-table img {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Sri Sairam Crackers</h1>
+      </div>
+      <div class="bill-info">
+        <p><strong>Name:</strong> <%= bill.userData.name %></p>
+        <p><strong>Contact:</strong> <%= bill.userData.mobile %></p>
+        <p><strong>Email:</strong> <%= bill.userData.email %></p>
+
+        <p><strong>Address:</strong> <%= bill.userData.address %></p>
+
+        <p><strong>Pincode:</strong> <%= bill.userData.pincode %></p>
+      </div>
+      <table class="product-table">
+        <thead>
+          <tr >
+            <th>Product</th>
+            <th style="text-align: right;">Qty</th>
+            <th style="text-align: right;">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% bill.cart.forEach(function(item) { %>
+          <tr style="padding: 4px; text-align: right;">
+            <td style="text-align: left;">
+              <br /><%= item['1'] %><br /><%= item['0'] %><br /><%= item['3']
+              %>
+            </td>
+            <td><%= item.quantity %></td>
+            <td>₹<%= item['2'] %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      <div
+        style="
+          background-color: #000;
+          color: #fff;
+          padding: 10px;
+          margin-top: 20px;
+          width: 100%;
+          text-align: left;
+        "
+       classname="lastd">
+         <p style="text-align: right; margin-right: 20px; font-size: 14px;font-weight:bold;">
+          MRP Price : ₹ <%= bill.MrpPrice %>
+        </p>
+        <p style="text-align: right; margin-right: 20px; font-size: 14px;font-weight:bold;">
+          Discountprice : ₹ <%= bill.DiscountPrice %>
+        </p>
+        <p style="text-align: right; margin-right: 20px; font-size: 14px;font-weight:bold;">
+          totalPrice : ₹ <%= bill.totalprice %>
+        </p>
+        <p style="text-align: right; margin-right: 20px; font-size: 14px;font-weight:bold;">
+          Non discounted items price : ₹ <%= bill.nonDiscountedItems %>
+        </p>
+        
+        <hr style="border: 1px solid #333;padding-left: 0%;" />
+        <p
+          style="font-size: 18px;
+            font-weight: bold;  
+            color: #ffc107;
+            text-align: right;
+            margin-right: 20px;
+          "
+       >
+       Grand Total : ₹<%= bill.grandtotalPrice %>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
